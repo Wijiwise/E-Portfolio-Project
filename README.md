@@ -13,8 +13,8 @@ pnpm dev
 # or
 bun dev
 ```
-#FRONTEND
+##FRONTEND
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-#BACKEND
+##BACKEND
 Open [http://localhost:5000/api/posts](http://localhost:5000/api/posts) to view the database.
