@@ -3,8 +3,10 @@
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
+    "checkJs": false,
     "skipLibCheck": true,
     "strict": true,
+    "noImplicitAny": false,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -26,9 +28,10 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "index.ts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+  , "src/**/*"  ],
   "exclude": ["node_modules"]
 }

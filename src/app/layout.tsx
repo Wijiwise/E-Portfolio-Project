@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Frontend Workshop Blog",
+  title: "Luis Carlos E-Portfolio",
   description: "A single-page blog built with Next.js and TypeScript.",
 };
 

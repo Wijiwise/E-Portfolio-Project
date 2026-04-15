@@ -1,9 +1,9 @@
-const POSTS_API_URL = "https://backendworkshop.app.dlsu-lscs.org/api/posts";
+const POSTS_API_URL = "http://localhost:5000/api/posts";
 
 export async function submitPost(text: string): Promise<void> {
-  const body = text.trim();
+  const content = text.trim();
 
-  if (!body) {
+  if (!content) {
     throw new Error("Post content is required.");
   }
 
@@ -12,12 +12,37 @@ export async function submitPost(text: string): Promise<void> {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ body }),
+    body: JSON.stringify({ content }), 
   });
 
   if (!response.ok) {
-    throw new Error(
-      "We could not create your post right now. Please try again.",
-    );
+    throw new Error("We could not create your post right now.");
+  }
+}
+
+export async function deletePost(postId: number): Promise<void> {
+  const response = await fetch(`${POSTS_API_URL}/${postId}`, {
+    method: "DELETE",
+  }); 
+  if (!response.ok) throw new Error("Failed to delete the post.");
+}
+
+export async function editPost(postId: number, newText: string): Promise<void> {
+  const content = newText.trim();
+
+  if (!content) {
+    throw new Error("Content is required.");
+  }
+
+  const response = await fetch(`${POSTS_API_URL}/${postId}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ content }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to update the post.");
   }
 }
