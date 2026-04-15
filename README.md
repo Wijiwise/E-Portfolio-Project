@@ -1,20 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Full-Stack ePortfolio Workshop
 
-## Getting Started
+This is a full-stack application featuring a **Next.js** frontend, an **Express** backend, and a **MySQL** database.
 
-First, run the development server:
+##Getting Started
 
+### 1. Prerequisites
+* **Node.js** installed.
+* **MySQL Server** running locally.
+* A `.env.details` file in the root directory with your database credentials.
+
+### 2. Database Setup
+Before running the application, initialize the database using the provided SQL script:
+1. Open MySQL Workbench or your terminal.
+2. Run the code found in `post.sql` to create the `myDB` database and the `posts` table.
+
+### 3. Installation/Running the Website
+Install the dependencies for the project:
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or 
-pnpm dev
-# or
-bun dev
-```
-##FRONTEND
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-##BACKEND
-Open [http://localhost:5000/api/posts](http://localhost:5000/api/posts) to view the database.
