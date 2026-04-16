@@ -6,7 +6,10 @@ export default async function Home() {
     return (
         <div className="mx-auto w-full max-w-4xl px-5 py-12 sm:px-8 sm:py-16">
             <main className="space-y-10 sm:space-y-12">
-                <Hero name="Luis Guiller Alberto M. Carlos" role="Software Engineer" bio="AVP in Training in La Salle Computer Society, Research and Development Committee"/>
+                <Hero name="Luis Guiller Alberto M. Carlos" role="Software Engineer" 
+                bio="AVP in Training in La Salle Computer Society, Research and Development Committee"
+                githubUrl="https://github.com/Wijiwise/Coding-Projects.git"
+                imageUrl="/pfp.jpg"/>
                 <CreatePostForm />
                 <PostsSection />
             </main>
