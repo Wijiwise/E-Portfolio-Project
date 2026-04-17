@@ -18,5 +18,4 @@ Before running the application, initialize the database using the provided SQL s
 Install the dependencies for the project:
 ```bash
 npm install
-run posts.sql on command line or MySQL Workbench
 npm run dev
